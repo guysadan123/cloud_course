@@ -1,0 +1,7 @@
+Useful commands:
+curl -X PUT -w "\n" -F "file=@file" "http://localhost:5000/enqueue?iterations=40"
+curl -X POST -w "\n" "http://localhost:5000/pullCompleted?top=1"
+
+Articles:
+1. https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#policy-creating-aws-cli
+2. https://docs.aws.amazon.com/cli/latest/reference/autoscaling/create-launch-configuration.html

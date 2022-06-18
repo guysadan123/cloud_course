@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install redis-server -y
+
+# bind address to all interfaces instead of loopback only
+sudo sed -i.bak "s#^bind 127.0.0.1.*#bind 0.0.0.0#g" /etc/redis/redis.conf 
+sudo systemctl restart redis.service

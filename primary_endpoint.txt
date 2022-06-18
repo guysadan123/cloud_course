@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install python3-flask git-all python3-pip -y
+pip3 install redis
+pip3 install apscheduler
+pip3 install boto3
+git clone "https://github.com/guysadan123/project_cloud.git"    
+nohup python3 project_cloud/endpoint.py &>/dev/null &
+
